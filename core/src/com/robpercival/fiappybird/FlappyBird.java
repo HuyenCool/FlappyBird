@@ -32,11 +32,10 @@ public class FlappyBird extends ApplicationAdapter {
 	BitmapFont font;
 
 	int ganeState = 0; //biểu thị trạng thái trò chơi
-	float gravicy = 2;
-
+	float gravicy = 1;
 	Texture topTube; //ống trên
 	Texture bottomTube; //ống dưới
-	float gap = 400; //khoang cách của 2 cái ống
+	float gap = 500; //khoang cách của 2 cái ống
 	float maxTubeOffset;
 	Random randomGenerator;
 	float tubeVelocity = 4;
@@ -108,7 +107,7 @@ public class FlappyBird extends ApplicationAdapter {
 			}
 
 			if(Gdx.input.justTouched()){ //thể hiện sự chạm vào màn hình
-				velocity = -30;
+				velocity = -10;
 
 			}
 			if(birdY>0 ||  velocity<0){ // ngăn k cho con chim biến mất khỏi màn hình
